@@ -1,0 +1,507 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Rubik';
+}
+
+nav {
+    z-index: 3;
+    background: #ffffff;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+label.logo {
+    color: #000000;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000000;
+    font-size: 17px;
+    padding: 9px 15px;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+a.active {
+    background: #eaeaea;
+    transition: .3s;
+}
+
+a:hover {
+    background: #d0d0d0;
+    transition: .3s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #eaeaea;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.feed {
+    margin: 80px 20% 0 20%;
+}
+
+@media (max-width: 952px) {
+    .feed {
+        margin: 80px 15% 0 15%;
+    }
+
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .feed {
+        margin: 80px 5% 0 5%;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover, a.active {
+        background: none;
+        color: #eaeaea;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+section {
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+.description {
+    margin: 120px auto 40px auto;
+    text-align: center;
+    width: 80%;
+}
+
+.description h6 {
+    font-weight: normal;
+    font-size: 20pt;
+}
+
+.wrap {
+    position: relative;
+    width: 350px;
+    margin: 30px auto;
+}
+
+.select {
+    position: relative;
+    width: 350px;
+}
+
+.choose-category {
+    margin-bottom: -25px;
+    text-align: center;
+}
+
+.select-text {
+    position: relative;
+    font-family: inherit;
+    background-color: transparent;
+    width: 350px;
+    border: none;
+}
+
+.post-container {
+    padding: 35px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.post-container img {
+    border-radius: 50%;
+}
+
+.author-avatar, .post-container .author-name {
+    float: left;
+}
+
+.author-avatar {
+    margin-right: 20px;
+}
+
+.post-container .author-name {
+    margin-right: 5px;
+}
+
+.response-container .author-name {
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+.post-container .author-name, .author-surname, .post-date {
+    font-weight: normal;
+}
+
+.post-date {
+    margin-top: 4px;
+    font-size: 14px;
+    color: grey;
+}
+
+.post-title {
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;
+}
+
+.post-text {
+    font-weight: normal;
+}
+
+.login-form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    display: flex;
+}
+
+.login-form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form-container .email-input, .password-input {
+    margin-top: 16px;
+    margin-bottom: 3px;
+}
+
+.submit-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+
+.submit-button {
+    background-color: #1c1c1c; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 12px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-button:hover {
+    background-color: #000000; /* Green */
+}
+
+.post-category {
+    background-color: #b6b6b6;
+    display: inline-block;
+    float: right;
+    border-radius: 8px;
+}
+
+.post-category h3 {
+    font-weight: normal;
+    color: white;
+    margin: 8px;
+    font-size: 14px;
+}
+
+.registration-avatar {
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.profile-avatar {
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+}
+
+.profile-name-surname {
+    display: flex;
+    text-align: center;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.profile-email-phone {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.profile-email-phone h3{
+    font-weight: normal;
+    font-size: 18px;
+    color: grey;
+}
+
+.signout-button {
+    border: none;
+    font-size: 17px;
+    padding: 9px 15px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    background-color: #1c1c1c;
+    color: white;
+    transition: .3s;
+}
+
+.signout-button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.delete-account-button {
+    margin: 0 auto;
+    display: flex;
+    border: none;
+    padding: 15px 17px;
+    background-color: #ffe2e2;
+    color: #e71c1c;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.delete-account-button:hover {
+    background-color: #f3cfcf;
+    cursor: pointer;
+}
+
+.delete-post-button {
+    margin: 15px 15px 0 0;
+    border: none;
+    padding: 15px 17px;
+    background-color: #ffe2e2;
+    color: #e71c1c;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.delete-post-button:hover {
+    background-color: #f3cfcf;
+    cursor: pointer;
+}
+
+.update-account-button {
+    margin: 0 auto 15px auto;
+    display: flex;
+    border: none;
+    padding: 15px 17px;
+    background-color: #efefef;
+    color: #000000;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.update-account-button:hover {
+    background-color: #dadada;
+    cursor: pointer;
+}
+
+.back-button-container {
+    margin: 30px 0 0 30px;
+}
+
+.add-post-button-container {
+    margin: 30px 0 0 30px;
+    float: left;
+}
+
+.back-button-container a {
+    color: black;
+    padding: 15px 17px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.back-button-container a:hover {
+    background-color: #dadada;
+    cursor: pointer;
+}
+
+.see-responses-button {
+    margin: 15px 15px 0 0;
+    display: flex;
+    border: none;
+    padding: 15px 17px;
+    background-color: #efefef;
+    color: #000000;
+    border-radius: 8px;
+    transition: .3s;
+    float: left;
+}
+
+.edit-response-button {
+    margin: 15px 15px 0 0;
+    border: none;
+    padding: 15px 17px;
+    background-color: #efefef;
+    color: #000000;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.want-help-button {
+    margin: 15px 15px 0 0;
+    border: none;
+    padding: 15px 17px;
+    background-color: #efefef;
+    color: #000000;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.want-help-button:hover {
+    background-color: #dadada;
+    cursor: pointer;
+}
+
+.see-responses-button:hover, .edit-response-button:hover {
+    background-color: #dadada;
+    cursor: pointer;
+}
+
+
+
+.add-post-button {
+    color: #000000;
+    padding: 15px 17px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.response-container {
+    border: 1px solid #dcdcdc;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    width: 60%;
+    margin: 0 auto 15px auto;
+}
+
+.type-container {
+    background-color: #5770ec;
+    display: inline-block;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.response-container .type {
+    font-weight: normal;
+    color: white;
+    margin: 8px;
+    font-size: 14px;
+}
